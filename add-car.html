@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布车辆 - Online Car Sale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Company Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="search.html">搜索车辆</a></li>
+                <li><a href="register.html">卖家注册</a></li>
+                <li><a href="log-in.html">卖家登录</a></li>
+                <li><a href="add-car.html" class="active">发布车辆</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 600px;">
+        <h2>发布您的爱车</h2>
+        <form id="addCarForm">
+            <label>颜色 (Color):</label>
+            <input type="text" id="color" required placeholder="e.g. 幻夜黑">
+            
+            <label>型号 (Model):</label>
+            <input type="text" id="model" required placeholder="e.g. Tesla Model 3">
+            
+            <label>生产年份 (Year):</label>
+            <input type="number" id="year" required min="1990" max="2025">
+            
+            <label>所在地 (Location):</label>
+            <input type="text" id="location" required>
+            
+            <label>价格 (Price - RMB):</label>
+            <input type="number" id="price" required placeholder="¥">
+            
+            <label>车辆照片 (Image):</label>
+            <input type="file" id="carImage" accept="image/*" required style="border:none; padding-left:0;">
+            
+            <button type="submit">立即发布广告</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
