@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卖家注册 - Online Car Sale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Company Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="search.html">搜索车辆</a></li>
+                <li><a href="register.html" class="active">卖家注册</a></li>
+                <li><a href="log-in.html">卖家登录</a></li>
+                <li><a href="add-car.html">发布车辆</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 600px;">
+        <h2>建立卖家档案</h2>
+        <p style="color: var(--gray-text); margin-bottom: 20px;">请填写真实信息以确保平台交易安全。</p>
+        <form id="regForm">
+            <label>姓名 (Name - 仅限字母/空格):</label>
+            <input type="text" id="name" required placeholder="e.g. John Doe">
+            
+            <label>地址 (Address - 字母/数字/空格):</label>
+            <input type="text" id="address" required>
+            
+            <label>电话 (Phone - 11位中国大陆号码):</label>
+            <input type="text" id="phone" required>
+            
+            <label>邮箱 (Email - .com 或 .cn):</label>
+            <input type="email" id="email" required>
+            
+            <label>用户名 (Username - 至少6位字母或数字):</label>
+            <input type="text" id="username" required>
+            
+            <label>密码 (Password - 至少6位字母或数字):</label>
+            <input type="password" id="password" required>
+            
+            <button type="submit">提交并注册</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
