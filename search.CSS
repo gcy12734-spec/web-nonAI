@@ -29,12 +29,20 @@
 .car-card { border: 1px solid var(--gray-border); padding: 15px; border-radius: 8px; background: var(--primary-white); transition: var(--transition); cursor: pointer; }
 .car-card:hover { transform: translateY(-8px); box-shadow: 0 12px 20px rgba(0,0,0,0.08); border-color: transparent; }
 
-.img-placeholder { width: 100%; height: 180px; background: var(--gray-light); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #a1a1aa; margin-bottom: 15px; transition: var(--transition); }
-.car-card:hover .img-placeholder { background: #e4e4e7; color: var(--primary-black); }
+/* 用新图片样式替换了原本的占位框样式 */
+.car-img { 
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; /* 保证图片不变形 */
+    border-radius: 4px; 
+    margin-bottom: 15px; 
+    transition: var(--transition); 
+}
+.car-card:hover .car-img { opacity: 0.9; }
 
 .car-card h3 { font-size: 1.1rem; margin-bottom: 5px; }
 .car-desc { color: var(--gray-text); font-size: 0.85rem; margin-bottom: 10px; }
-.car-price { font-weight: 800; font-size: 1.3rem; color: #ef4444; /* 价格红色 */ }
+.car-price { font-weight: 800; font-size: 1.3rem; color: #ef4444; }
 
 /* 侧边栏热销 */
 .sidebar-title { font-size: 1.1rem; border-bottom: 2px solid var(--primary-black); padding-bottom: 10px; margin-bottom: 20px; display: inline-block; }
