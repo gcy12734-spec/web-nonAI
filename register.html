@@ -1,53 +1,74 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>卖家注册 - Online Car Sale</title>
+    <title>Register - Online Car Sale</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
+    <div class="scroll-bg">
+        <div class="scroll-col up">
+            <img src="images/car1.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car3.jpg" alt="Car">
+            <img src="images/car1.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car3.jpg" alt="Car">
+        </div>
+        <div class="scroll-col down">
+            <img src="images/car4.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car1.jpg" alt="Car">
+            <img src="images/car4.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car1.jpg" alt="Car">
+        </div>
+    </div>
+
     <header>
         <img src="images/logo.png" alt="Company Logo">
         <nav>
             <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="search.html">搜索车辆</a></li>
-                <li><a href="register.html" class="active">卖家注册</a></li>
-                <li><a href="log-in.html">卖家登录</a></li>
-                <li><a href="add-car.html">发布车辆</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search Cars</a></li>
+                <li id="nav-register"><a href="register.html" class="active">Register</a></li>
+                <li id="nav-login"><a href="log-in.html">Login</a></li>
+                <li><a href="add-car.html">Post Car</a></li>
+                <li id="nav-logout" style="display: none;"><a href="#" style="color: #ef4444;">Logout</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
         <div class="form-wrapper">
-            <h2>建立卖家档案</h2>
-            <p class="form-helper" style="margin-top: 0; margin-bottom: 20px;">请填写真实信息以确保平台交易安全。</p>
+            <h2>Create Seller Profile</h2>
+            <p class="form-helper" style="margin-top: 0; margin-bottom: 20px;">Please enter real information to ensure safe trading.</p>
             <form id="regForm">
-                <label>姓名 (Name):</label>
+                <label>Name:</label>
                 <input type="text" id="name" required placeholder="e.g. John Doe">
                 
-                <label>地址 (Address):</label>
+                <label>Address:</label>
                 <input type="text" id="address" required>
                 
-                <label>电话 (Phone):</label>
+                <label>Phone:</label>
                 <input type="text" id="phone" required>
                 
-                <label>邮箱 (Email):</label>
+                <label>Email:</label>
                 <input type="email" id="email" required>
                 
-                <label>用户名 (Username):</label>
+                <label>Username:</label>
                 <input type="text" id="username" required>
                 
-                <label>密码 (Password):</label>
+                <label>Password:</label>
                 <input type="password" id="password" required>
                 
-                <button type="submit" class="btn-block">提交并注册</button>
+                <button type="submit" class="btn-block">Submit & Register</button>
             </form>
         </div>
     </main>
+    <script src="common.js"></script>
     <script src="register.js"></script>
 </body>
 </html>

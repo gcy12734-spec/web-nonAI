@@ -1,6 +1,6 @@
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     localStorage.setItem('isLoggedIn', 'true'); 
-    alert("登录成功！");
+    alert("Login successful!");
     window.location.href = "add-car.html"; 
 });

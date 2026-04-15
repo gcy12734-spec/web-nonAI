@@ -13,13 +13,13 @@ document.getElementById('regForm').addEventListener('submit', function(e) {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    if (!nameRegex.test(name)) return alert("验证失败：姓名只能包含英文字母和空格。");
-    if (!addrRegex.test(address)) return alert("验证失败：地址只能包含英文字母、数字和空格。");
-    if (!phoneRegex.test(phone)) return alert("验证失败：请输入有效的中国手机号码（11位）。");
-    if (!emailRegex.test(email)) return alert("验证失败：邮箱必须包含一个 '@' 且以 .cn 或 .com 结尾。");
-    if (!accountRegex.test(username)) return alert("验证失败：用户名必须至少包含6个字母或数字。");
-    if (!accountRegex.test(password)) return alert("验证失败：密码必须至少包含6个字母或数字。");
+    if (!nameRegex.test(name)) return alert("Validation failed: Name can only contain English letters and spaces.");
+    if (!addrRegex.test(address)) return alert("Validation failed: Address can only contain letters, numbers, and spaces.");
+    if (!phoneRegex.test(phone)) return alert("Validation failed: Please enter a valid 11-digit mobile number.");
+    if (!emailRegex.test(email)) return alert("Validation failed: Email must contain '@' and end with .cn or .com.");
+    if (!accountRegex.test(username)) return alert("Validation failed: Username must be at least 6 letters or numbers.");
+    if (!accountRegex.test(password)) return alert("Validation failed: Password must be at least 6 letters or numbers.");
 
-    alert("注册成功！欢迎加入 Online Car Sale。");
+    alert("Registration successful! Welcome to Online Car Sale.");
     window.location.href = "log-in.html"; 
 });
