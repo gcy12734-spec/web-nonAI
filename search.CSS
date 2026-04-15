@@ -1,0 +1,49 @@
+/* 搜索大厅布局与卡片 */
+.search-page-layout {
+    max-width: 1200px;
+    display: flex;
+    gap: 30px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.main-content { flex: 3; background: var(--primary-white); padding: 30px; border-radius: 8px; box-shadow: var(--shadow-md); }
+.sidebar { flex: 1; background: var(--primary-white); padding: 30px; border-radius: 8px; height: fit-content; box-shadow: var(--shadow-md); position: sticky; top: 90px; }
+
+/* 筛选区 */
+.filter-panel { border-bottom: 1px solid var(--gray-border); margin-bottom: 25px; padding-bottom: 15px; }
+.filter-row { display: flex; align-items: flex-start; margin-bottom: 15px; }
+.filter-label { color: var(--gray-text); font-size: 0.9rem; width: 60px; font-weight: bold; margin-top: 4px; }
+.filter-options { display: flex; flex-wrap: wrap; gap: 10px; flex: 1; }
+.filter-tag { font-size: 0.9rem; cursor: pointer; padding: 6px 14px; border-radius: 20px; transition: var(--transition); border: 1px solid transparent; }
+.filter-tag:hover { background: var(--gray-light); border-color: var(--gray-border); }
+.filter-tag.active { background: var(--primary-black); color: var(--primary-white); font-weight: 600; }
+
+.sort-bar { display: flex; gap: 25px; margin-bottom: 25px; font-size: 0.95rem; color: var(--gray-text); border-bottom: 1px solid var(--gray-light); padding-bottom: 15px; }
+.sort-bar span { cursor: pointer; transition: var(--transition); }
+.sort-bar span:hover, .sort-bar span.active { color: var(--primary-black); font-weight: bold; }
+
+/* 车辆网格与卡片悬浮 */
+.car-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; }
+.car-card { border: 1px solid var(--gray-border); padding: 15px; border-radius: 8px; background: var(--primary-white); transition: var(--transition); cursor: pointer; }
+.car-card:hover { transform: translateY(-8px); box-shadow: 0 12px 20px rgba(0,0,0,0.08); border-color: transparent; }
+
+.img-placeholder { width: 100%; height: 180px; background: var(--gray-light); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #a1a1aa; margin-bottom: 15px; transition: var(--transition); }
+.car-card:hover .img-placeholder { background: #e4e4e7; color: var(--primary-black); }
+
+.car-card h3 { font-size: 1.1rem; margin-bottom: 5px; }
+.car-desc { color: var(--gray-text); font-size: 0.85rem; margin-bottom: 10px; }
+.car-price { font-weight: 800; font-size: 1.3rem; color: #ef4444; /* 价格红色 */ }
+
+/* 侧边栏热销 */
+.sidebar-title { font-size: 1.1rem; border-bottom: 2px solid var(--primary-black); padding-bottom: 10px; margin-bottom: 20px; display: inline-block; }
+.hot-list { list-style: none; }
+.hot-item { padding: 15px 0; border-bottom: 1px dashed var(--gray-border); transition: var(--transition); }
+.hot-item:last-child { border-bottom: none; }
+.hot-item:hover { transform: translateX(5px); }
+.hot-info h4 { font-size: 1rem; margin-bottom: 4px; cursor: pointer; }
+.hot-info h4:hover { text-decoration: underline; }
+.hot-info p { font-size: 0.8rem; color: var(--gray-text); }
+
+@media (max-width: 900px) { .search-page-layout { flex-direction: column; } .sidebar { position: static; } }
