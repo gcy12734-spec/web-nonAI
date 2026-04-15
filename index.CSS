@@ -2,6 +2,8 @@
 .intro {
     text-align: center;
     padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
 }
 
 .intro h1 {
@@ -26,7 +28,6 @@
     gap: 20px;
 }
 
-/* 首页线框按钮样式优化 */
 .btn-outline {
     background: transparent;
     color: var(--primary-black);
