@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Cars - Online Car Sale</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Company Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html" class="active">Search Cars</a></li>
+                <li id="nav-register"><a href="register.html">Register</a></li>
+                <li id="nav-login"><a href="log-in.html">Login</a></li>
+                <li><a href="add-car.html">Post Car</a></li>
+                <li id="nav-logout" style="display: none;"><a href="#" style="color: #ef4444;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container search-page-layout">
+        <div class="main-content">
+            <div class="filter-panel">
+                <div class="filter-row">
+                    <span class="filter-label">Brand</span>
+                    <div class="filter-options" id="brand-filters">
+                        <span class="filter-tag active">Any</span>
+                        <span class="filter-tag">Tesla</span>
+                        <span class="filter-tag">BMW</span>
+                        <span class="filter-tag">Porsche</span>
+                        <span class="filter-tag">BYD</span>
+                    </div>
+                </div>
+                <div class="filter-row">
+                    <span class="filter-label">Price</span>
+                    <div class="filter-options" id="price-filters">
+                        <span class="filter-tag active">Any</span>
+                        <span class="filter-tag">Under 30k</span>
+                        <span class="filter-tag">30k - 50k</span>
+                        <span class="filter-tag">50k - 100k</span>
+                        <span class="filter-tag">100k - 200k</span>
+                        <span class="filter-tag">Over 200k</span>
+                    </div>
+                </div>
+                <div class="filter-row">
+                    <span class="filter-label">Type</span>
+                    <div class="filter-options" id="type-filters">
+                        <span class="filter-tag active">Any</span>
+                        <span class="filter-tag">Sedan</span>
+                        <span class="filter-tag">SUV</span>
+                        <span class="filter-tag">MPV</span>
+                        <span class="filter-tag">Sports</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sort-bar">
+                <span class="sort-btn active" data-sort="default" style="font-weight: bold; color: var(--primary-black);">Default Sort</span>
+                <span class="sort-btn" data-sort="newest">Newest</span>
+                <span class="sort-btn" data-sort="price-asc">Price Low-High</span>
+                <span class="sort-btn" data-sort="age-asc">Newest Year</span>
+            </div>
+
+            <div id="results" class="car-grid">
+                <div class="car-card" data-brand="Tesla" data-price="185000" data-type="Sedan" data-year="2022" onclick="showDetails('car1')">
+                    <img src="images/car1.jpg" alt="Tesla" class="car-img">
+                    <h3>Tesla Model 3 - 2022</h3>
+                    <p class="car-desc">Black / Beijing / Sedan</p>
+                    <p class="car-price">¥ 185,000</p>
+                </div>
+                <div class="car-card" data-brand="BMW" data-price="210000" data-type="Sedan" data-year="2021" onclick="showDetails('car2')">
+                    <img src="images/car2.jpg" alt="BMW" class="car-img">
+                    <h3>BMW 3 Series - 2021</h3>
+                    <p class="car-desc">White / Shanghai / Sedan</p>
+                    <p class="car-price">¥ 210,000</p>
+                </div>
+                <div class="car-card" data-brand="Porsche" data-price="450000" data-type="SUV" data-year="2020" onclick="showDetails('car3')">
+                    <img src="images/car3.jpg" alt="Porsche" class="car-img">
+                    <h3>Porsche Macan - 2020</h3>
+                    <p class="car-desc">Grey / Guangzhou / SUV</p>
+                    <p class="car-price">¥ 450,000</p>
+                </div>
+                <div class="car-card" data-brand="BYD" data-price="205000" data-type="Sedan" data-year="2023" onclick="showDetails('car4')">
+                    <img src="images/car4.jpg" alt="BYD" class="car-img">
+                    <h3>BYD Han - 2023</h3>
+                    <p class="car-desc">Grey / Shenzhen / Sedan</p>
+                    <p class="car-price">¥ 205,000</p>
+                </div>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Trending HOT</h3>
+            <ul class="hot-list">
+                <li class="hot-item">
+                    <div class="hot-info">
+                        <h4>Wuling Hongguang</h4>
+                        <p>1100+ Sold recently</p>
+                    </div>
+                </li>
+                <li class="hot-item">
+                    <div class="hot-info">
+                        <h4>Tesla Model Y</h4>
+                        <p>900+ Sold recently</p>
+                    </div>
+                </li>
+                <li class="hot-item">
+                    <div class="hot-info">
+                        <h4>BYD PLUS</h4>
+                        <p>800+ Sold recently</p>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    </main>
+    
+    <script src="common.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>

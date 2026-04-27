@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车辆详情 - Online Car Sale</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="car-detail.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="search.html">返回搜索</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container detail-layout">
+        <div class="detail-img">
+            <span>车辆高清大图展示区</span>
+        </div>
+
+        <div class="detail-info">
+            <h1>Tesla Model 3 - 2022款</h1>
+            <p class="price-tag">¥ 185,000</p>
+            
+            <ul class="spec-list">
+                <li><strong>上牌时间：</strong> 2022年05月</li>
+                <li><strong>表显里程：</strong> 1.5万公里</li>
+                <li><strong>所在地：</strong> 北京</li>
+                <li><strong>排放标准：</strong> 纯电动</li>
+            </ul>
+
+            <div class="buy-box">
+                <h3>意向购买</h3>
+                <p style="font-size: 0.8rem; margin-bottom: 15px;">点击按钮预约看车或直接下单</p>
+                <button class="btn-block" onclick="handleBuy()">立即购买</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="car-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+.detail-layout {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+    padding: 50px;
+}
+
+.detail-img {
+    flex: 1.5;
+    background: #f3f4f6;
+    height: 450px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 1.2rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden; /* 防止图片超出圆角 */
+}
+
+.detail-img img {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+.detail-img img:hover {
+    transform: scale(1.02);
+}
+
+.detail-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.detail-info h1 { font-size: 2.2rem; margin-bottom: 10px; line-height: 1.2; }
+.price-tag { font-size: 2.5rem; color: #ef4444; font-weight: 800; margin: 10px 0 25px 0; }
+
+.spec-list {
+    list-style: none;
+    border-top: 1px solid var(--gray-border);
+    border-bottom: 1px solid var(--gray-border);
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+.spec-list li { margin-bottom: 12px; font-size: 1.05rem; display: flex; justify-content: space-between; }
+.spec-list li strong { color: var(--gray-text); font-weight: normal; }
+
+.buy-box {
+    background: #fafafa;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--gray-border);
+}
+.buy-box h3 { font-size: 1.2rem; margin-bottom: 5px; }
+
+@media (max-width: 800px) {
+    .detail-layout { flex-direction: column; padding: 20px; gap: 30px; }
+    .detail-img { height: 300px; }
+}
+
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* 右上角关闭按钮 */
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #999;
+}
