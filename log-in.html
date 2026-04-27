@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Online Car Sale</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="scroll-bg">
+        <div class="scroll-col up">
+            <img src="images/car1.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car3.jpg" alt="Car">
+            <img src="images/car1.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car3.jpg" alt="Car">
+        </div>
+        <div class="scroll-col down">
+            <img src="images/car4.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car1.jpg" alt="Car">
+            <img src="images/car4.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car1.jpg" alt="Car">
+        </div>
+    </div>
+
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search Cars</a></li>
+                <li id="nav-register"><a href="register.html">Register</a></li>
+                <li id="nav-login"><a href="log-in.html" class="active">Login</a></li>
+                <li><a href="add-car.html">Post Car</a></li>
+                <li id="nav-logout" style="display: none;"><a href="#" style="color: #ef4444;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="form-wrapper">
+            <h2>Seller Login</h2>
+            <form id="loginForm">
+                <label>Username</label>
+                <input type="text" id="loginUser" placeholder="Enter username" required>
+                
+                <label>Password</label>
+                <input type="password" id="loginPass" placeholder="Enter password" required>
+                
+                <div class="form-footer">
+                    <a href="#" onclick="alert('Please contact admin to reset password')">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn-block">Login Now</button>
+            </form>
+            <p class="form-helper">Don't have an account? <a href="register.html">Create one</a></p>
+        </div>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="log-in.js"></script>
+</body>
+</html>

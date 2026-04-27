@@ -1,0 +1,122 @@
+.form-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-wrapper h2, .container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+form { display: flex; flex-direction: column; }
+
+label {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+/*输入框聚焦时的呼吸光环效果 */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="file"] {
+    padding: 14px;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: var(--transition);
+}
+
+input:hover { border-color: #9ca3af; }
+input:focus {
+    outline: none;
+    border-color: var(--primary-black);
+    background-color: var(--primary-white);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05); /* 黑色淡光环 */
+}
+
+/* 表单底部辅助链接 */
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.form-footer a, .form-helper a {
+    color: var(--gray-text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+.form-footer a:hover, .form-helper a:hover {
+    color: var(--primary-black);
+    text-decoration: underline;
+}
+.form-helper { text-align: center; margin-top: 25px; font-size: 0.9rem; color: var(--gray-text); }/* 登录、注册、发布车辆表单样式 */
+.form-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-wrapper h2, .container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+form { display: flex; flex-direction: column; }
+
+label {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+/* 输入框聚焦时的呼吸光环效果 */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="file"] {
+    padding: 14px;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: var(--transition);
+}
+
+input:hover { border-color: #9ca3af; }
+input:focus {
+    outline: none;
+    border-color: var(--primary-black);
+    background-color: var(--primary-white);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05); /* 黑色淡光环 */
+}
+
+/* 表单底部辅助链接 */
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.form-footer a, .form-helper a {
+    color: var(--gray-text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+.form-footer a:hover, .form-helper a:hover {
+    color: var(--primary-black);
+    text-decoration: underline;
+}
+.form-helper { text-align: center; margin-top: 25px; font-size: 0.9rem; color: var(--gray-text); }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Car - Online Car Sale</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="scroll-bg">
+        <div class="scroll-col up">
+            <img src="images/car1.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car3.jpg" alt="Car">
+            <img src="images/car1.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car3.jpg" alt="Car">
+        </div>
+        <div class="scroll-col down">
+            <img src="images/car4.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car1.jpg" alt="Car">
+            <img src="images/car4.jpg" alt="Car">
+            <img src="images/car2.jpg" alt="Car">
+            <img src="images/car1.jpg" alt="Car">
+        </div>
+    </div>
+
+    <header>
+        <img src="images/logo.png" alt="Company Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search Cars</a></li>
+                <li id="nav-register"><a href="register.html">Register</a></li>
+                <li id="nav-login"><a href="log-in.html">Login</a></li>
+                <li><a href="add-car.html" class="active">Post Car</a></li>
+                <li id="nav-logout" style="display: none;"><a href="#" style="color: #ef4444;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="form-wrapper">
+            <h2>Post Your Car</h2>
+            <form id="addCarForm">
+                <label>Color:</label>
+                <input type="text" id="color" required placeholder="e.g. Midnight Black">
+                
+                <label>Model:</label>
+                <input type="text" id="model" required placeholder="e.g. Tesla Model 3">
+                
+                <label>Year:</label>
+                <input type="number" id="year" required min="1990" max="2025">
+                
+                <label>Location:</label>
+                <input type="text" id="location" required>
+                
+                <label>Price (RMB):</label>
+                <input type="number" id="price" required placeholder="¥">
+                
+                <label>Car Image:</label>
+                <input type="file" id="carImage" accept="image/*" required style="border:none; padding-left:0; background: transparent;">
+                
+                <button type="submit" class="btn-block">Publish Ad</button>
+            </form>
+        </div>
+    </main>
+    <script src="common.js"></script>
+    <script src="add-car.js"></script>
+</body>
+</html>

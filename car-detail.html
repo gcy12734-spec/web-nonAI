@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Detail - Online Car Sale</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="car-detail.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Back to Search</a></li>
+                <li id="nav-register"><a href="register.html">Register</a></li>
+                <li id="nav-login"><a href="log-in.html">Login</a></li>
+                <li><a href="add-car.html">Post Car</a></li>
+                <li id="nav-logout" style="display: none;"><a href="#" style="color: #ef4444;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container detail-layout">
+        <div class="detail-img" id="carImageContainer">
+            <span>Loading image...</span>
+        </div>
+
+        <div class="detail-info">
+            <h1 id="carTitle">Loading...</h1>
+            <p class="price-tag" id="carPrice">¥ --,---</p>
+            
+            <ul class="spec-list">
+                <li><strong>Registration:</strong> <span id="carDate">--</span></li>
+                <li><strong>Mileage:</strong> <span id="carMileage">--</span></li>
+                <li><strong>Location:</strong> <span id="carLocation">--</span></li>
+                <li><strong>Fuel Type:</strong> <span id="carType">--</span></li>
+            </ul>
+
+            <div class="buy-box">
+                <h3>Intent to Buy</h3>
+                <p style="font-size: 0.8rem; margin-bottom: 15px;">Click the button to book a viewing or order.</p>
+                <button class="btn-block" onclick="handleBuy()">Buy Now</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script src="common.js"></script>
+    <script src="car-detail.js"></script>
+</body>
+</html>

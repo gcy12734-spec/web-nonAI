@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车辆大厅 - Online Car Sale</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Company Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="search.html" class="active">搜索车辆</a></li>
+                <li><a href="register.html">卖家注册</a></li>
+                <li><a href="log-in.html">卖家登录</a></li>
+                <li><a href="add-car.html">发布车辆</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container search-page-layout">
+        <div class="main-content">
+            <div class="filter-panel">
+                <div class="filter-row">
+                    <span class="filter-label">品牌</span>
+                    <div class="filter-options" id="brand-filters">
+                        <span class="filter-tag active">不限</span>
+                        <span class="filter-tag">特斯拉</span>
+                        <span class="filter-tag">宝马</span>
+                        <span class="filter-tag">奥迪</span>
+                        <span class="filter-tag">保时捷</span>
+                        <span class="filter-tag">奔驰</span>
+                        <span class="filter-tag">比亚迪</span>
+                    </div>
+                </div>
+                <div class="filter-row">
+                    <span class="filter-label">价格</span>
+                    <div class="filter-options" id="price-filters">
+                        <span class="filter-tag active">不限</span>
+                        <span class="filter-tag">3万以下</span>
+                        <span class="filter-tag">3-5万</span>
+                        <span class="filter-tag">5-10万</span>
+                        <span class="filter-tag">10-20万</span>
+                        <span class="filter-tag">20万以上</span>
+                    </div>
+                </div>
+                <div class="filter-row">
+                    <span class="filter-label">级别</span>
+                    <div class="filter-options" id="type-filters">
+                        <span class="filter-tag active">不限</span>
+                        <span class="filter-tag">轿车</span>
+                        <span class="filter-tag">SUV</span>
+                        <span class="filter-tag">MPV</span>
+                        <span class="filter-tag">跑车</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sort-bar">
+                <span class="sort-btn active" data-sort="default" style="font-weight: bold; color: var(--primary-black);">默认排序</span>
+                <span class="sort-btn" data-sort="newest">最新上架</span>
+                <span class="sort-btn" data-sort="price-asc">价格最低 ↑</span>
+                <span class="sort-btn" data-sort="age-asc">车龄最短</span>
+            </div>
+
+            <div id="results" class="car-grid">
+                <div class="car-card" data-brand="特斯拉" data-price="185000" data-type="轿车" data-year="2022" onclick="showDetails('car1')">
+                    <div class="img-placeholder">车辆图片</div> 
+                    <h3>Tesla Model 3 - 2022</h3>
+                    <p class="car-desc">纯黑色 / 北京市 / 轿车</p>
+                    <p class="car-price">¥ 185,000</p>
+                </div>
+                <div class="car-card" data-brand="宝马" data-price="210000" data-type="轿车" data-year="2021" onclick="showDetails('car2')">
+                    <div class="img-placeholder">车辆图片</div> 
+                    <h3>BMW 3 Series - 2021</h3>
+                    <p class="car-desc">极地白 / 上海市 / 轿车</p>
+                    <p class="car-price">¥ 210,000</p>
+                </div>
+                <div class="car-card" data-brand="保时捷" data-price="450000" data-type="SUV" data-year="2020" onclick="showDetails('car3')">
+                    <div class="img-placeholder">车辆图片</div> 
+                    <h3>Porsche Macan - 2020</h3>
+                    <p class="car-desc">火山灰 / 广州市 / SUV</p>
+                    <p class="car-price">¥ 450,000</p>
+                </div>
+                <div class="car-card" data-brand="比亚迪" data-price="205000" data-type="轿车" data-year="2023" onclick="showDetails('car4')">
+                    <div class="img-placeholder">车辆图片</div> 
+                    <h3>BYD 汉 - 2023</h3>
+                    <p class="car-desc">时光灰 / 深圳市 / 轿车</p>
+                    <p class="car-price">¥ 205,000</p>
+                </div>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <h3 class="sidebar-title">热销车系 HOT</h3>
+            <ul class="hot-list">
+                <li class="hot-item">
+                    <div class="hot-info">
+                        <h4>五菱宏光 MINIEV</h4>
+                        <p>近期成交 1100+ 辆</p>
+                    </div>
+                </li>
+                <li class="hot-item">
+                    <div class="hot-info">
+                        <h4>Tesla Model Y</h4>
+                        <p>近期成交 900+ 辆</p>
+                    </div>
+                </li>
+                <li class="hot-item">
+                    <div class="hot-info">
+                        <h4>比亚迪 PLUS</h4>
+                        <p>近期成交 800+ 辆</p>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    </main>
+    <script src="search.js"></script>
+</body>
+</html>
